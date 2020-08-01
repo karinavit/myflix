@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import devflix from '../../assets/img/devflix.png';
 import './menu.css';
 import Button from '../Button'
@@ -7,11 +8,11 @@ import Button from '../Button'
 function Menu(){  
   return(
     <nav className="Menu">
-      <a href="/">
+      <Link href="/">
       <img className="Logo" src={devflix} alt="devFlix logo" />
-      </a>
+      </Link>
 
-      <Button as="a" className="ButtonLink"  href="/">
+      <Button as={Link} className="ButtonLink"  to="/cadastro/video">
         Novo Vídeo
       </Button>
     </nav>
